@@ -27,7 +27,9 @@ function App() {
 
   const allTodos = todosList.map((todo, index) => (
     <div>
-      <li key={todo}>{todo}</li>
+      <li key={todo} className="list">
+        {todo}
+      </li>
       <button
         type="button"
         onClick={() => handleRemove(todo)}
@@ -61,7 +63,7 @@ function App() {
           Add todo item
         </button>
       </form>
-      <ul className="list">{allTodos}</ul>
+      <ul>{allTodos}</ul>
     </div>
   );
 }
